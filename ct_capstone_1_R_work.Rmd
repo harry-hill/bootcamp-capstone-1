@@ -1,0 +1,24 @@
+Continued Step 3: Data Analysis
+
+```{r}
+dataset <- read.csv("../files/caravan_cleaned.csv") 
+
+View(dataset)
+```
+
+data exploration
+
+```{r}
+str(dataset)
+```
+
+```{r}
+summary(dataset)
+```
+
+```{r}
+# tried a linear regression, maybe do more if Tableau is not helpful
+# lm([target] ~ [predictor / features], data = [data source])
+lm_pp <- lm(caravan ~ purchasing_power, data = dataset)
+summary(lm_pp)
+```
